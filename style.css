@@ -1,0 +1,127 @@
+/* Blue-grey feathers and muted violet from the PIGEONS icon. */
+:root {
+  --ink: #354043;
+  --muted: #626d74;
+  --blue: #4d697c;
+  --violet: #79648a;
+  --sage: #59796b;
+  --paper: #f3f6f4;
+  --line: #ccd7db;
+  --soft: #e7edef;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { color: var(--violet); }
+button, a { touch-action: manipulation; }
+button { cursor: pointer; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--violet); outline-offset: 4px; }
+.skip { position: absolute; top: -80px; padding: 10px; background: #fff; z-index: 10; }
+.skip:focus { top: 8px; }
+main { max-width: 1080px; margin: auto; padding: 0 28px; }
+.hero { text-align: center; padding: 52px 0 40px; }
+h1 { max-width: 1000px; margin: 0 auto 28px; font-size: 38px; font-weight: 650; line-height: 1.3; letter-spacing: -.6px; text-wrap: balance; }
+h1 img { width: 56px; height: 56px; object-fit: contain; vertical-align: middle; margin: -8px 4px 0 0; }
+.project-name { color: var(--violet); }
+.authors { max-width: 900px; margin: 0 auto 16px; font-size: 17px; line-height: 1.9; }
+sup { font-size: .7em; }
+.authors sup { color: var(--violet); margin-left: 2px; }
+.affiliations { margin: 0 auto 12px; font-size: 14px; line-height: 1.8; }
+.author-notes { margin: 12px 0; font-size: 12px; color: var(--muted); }
+.resource-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.resource { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 9px 19px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 500; line-height: 1.5; text-decoration: none; box-shadow: 0 3px 7px rgb(53 64 67 / 14%); transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease; }
+.resource[href] { background: #526978; color: #fff; }
+.resource-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 20px; }
+.resource-icon svg { display: block; width: 18px; height: 18px; }
+.model-icon { font-size: 19px; line-height: 1; }
+section { padding: 30px 0; }
+h2 { color: var(--blue); margin: 0 0 24px; text-align: center; font-size: 29px; font-weight: 600; line-height: 1.3; }
+h3 { color: var(--sage); margin: 34px 0 16px; font-size: 21px; font-weight: 600; line-height: 1.4; }
+p { margin: 0 0 18px; }
+#abstract { max-width: 860px; margin: auto; padding-top: 40px; }
+#abstract p { text-align: justify; }
+figure { margin: 28px 0 32px; }
+figure img { display: block; width: 100%; height: auto; }
+.figure-link { display: block; cursor: zoom-in; background: #fff; border-radius: 6px; box-shadow: 0 4px 16px rgb(53 64 67 / 9%), 0 1px 3px rgb(53 64 67 / 5%); transition: transform 180ms ease, box-shadow 180ms ease; }
+.figure-link img { border-radius: inherit; }
+figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.note { color: var(--muted); font-size: 13px; }
+/* Grouped academic tables: consistent metric columns and restrained rules. */
+.table-scroll { overflow-x: auto; max-width: 100%; margin: 30px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 13px; line-height: 1.5; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; border-bottom: 1.5px solid #89979d; }
+caption { text-align: left; white-space: normal; padding: 0 0 12px; font-size: 14px; color: var(--muted); }
+td, th { padding: 9px 8px; text-align: center; }
+thead th { font-weight: 600; background: #e9eeec; }
+thead tr:first-child th { border-top: 1.5px solid #89979d; }
+thead tr:last-child th, thead th[rowspan] { border-bottom: 1px solid #a8b4b7; }
+thead .group-heading { border-bottom: 1px solid #ccd5d5; border-left: 1px solid #ccd5d5; }
+thead th:first-child[rowspan], tbody th { text-align: left; }
+tbody th { font-weight: 400; }
+tbody tr:nth-child(even) { background: #edf2ef; }
+tbody tr.ours { background: #ebe7ef; }
+tr.ours > * { border-top: 1px solid #b8afc3; }
+tr.ours th { font-weight: 600; color: #665476; }
+td strong { font-weight: 700; }
+.group-start { border-left: 1px solid #d5ddda; }
+.long-results, .short-results { table-layout: fixed; min-width: 1000px; }
+.long-results th[rowspan], .short-results th[rowspan] { width: 190px; }
+.long-results td, .long-results th { padding-left: 5px; padding-right: 5px; }
+.long-results th[rowspan], .long-results tbody th { padding-left: 10px; }
+.ablation-results { min-width: 760px; }
+.ablation-results th:first-child, .concat-results th:first-child { text-align: left; }
+.training-order { text-align: left; color: var(--muted); }
+.concat-results { max-width: 800px; min-width: 660px; margin: 0 auto; }
+@media (max-width: 700px) {
+  .table-scroll tbody th, .table-scroll thead th[rowspan] { position: sticky; left: 0; z-index: 1; background: var(--paper); border-right: 1px solid var(--line); }
+  .table-scroll thead th[rowspan] { background: #e9eeec; }
+  .table-scroll tbody tr:nth-child(even) th { background: #edf2ef; }
+  .table-scroll tbody tr.ours th { background: #ebe7ef; }
+}
+.short-results tbody tr.reference-model > * { color: #6f6f6f; background: #f7f7f7; }
+.short-results tbody tr.reference-model:nth-child(even) > * { background: #efefef; }
+#citation { max-width: 960px; margin: auto; }
+.bibtex-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; }
+.bibtex-header h2 { margin: 0; text-align: left; }
+#copy-citation { display: inline-flex; align-items: center; gap: 7px; border: 0; border-radius: 8px; background: #526978; color: #fff; padding: 9px 14px; font: inherit; font-size: 14px; line-height: 1.5; box-shadow: 0 2px 5px rgb(53 64 67 / 10%); transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease; }
+#copy-citation svg { width: 16px; height: 16px; }
+.citation-box { background: #eaf0f2; border: 1px solid #d8e0e3; padding: 24px; border-radius: 8px; box-shadow: 0 3px 12px rgb(53 64 67 / 6%); }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; line-height: 1.8; margin: 0; }
+pre code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; color: #354043; }
+#copy-status { display: block; font-size: 12px; color: var(--blue); }
+#copy-status:not(:empty) { margin-top: 8px; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .resource[href]:hover, #copy-citation:hover { background: #435b6b; transform: translateY(-2px); box-shadow: 0 6px 12px rgb(53 64 67 / 17%); }
+  .figure-link:hover { transform: translateY(-2px); box-shadow: 0 9px 24px rgb(53 64 67 / 13%); }
+}
+.resource[href]:active, #copy-citation:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .resource, .figure-link, #copy-citation { transition: none; }
+}
+footer { background: #e5ece8; text-align: center; margin-top: 24px; border-top: 1px solid var(--line); padding: 24px; color: var(--muted); font-size: 12px; }
+footer p { margin: 4px 0; }
+dialog { max-width: 95vw; max-height: 94vh; border: 1px solid var(--line); padding: 50px 16px 16px; overflow: auto; background: #fff; }
+dialog::backdrop { background: #354043cc; }
+dialog img { display: block; width: 1400px; max-width: none; height: auto; }
+#close-image { position: sticky; top: 0; float: right; margin-top: -38px; background: var(--ink); color: white; border: 0; padding: 8px 16px; }
+body:has(dialog[open]) { overflow: hidden; }
+@media (max-width: 700px) {
+  main { padding: 0 20px; }
+  .hero { padding: 32px 0 24px; }
+  h1 { font-size: 28px; letter-spacing: -.3px; }
+  h1 img { width: 42px; height: 42px; }
+  .authors { font-size: 15px; }
+  .desktop { display: none; }
+  .affiliations { font-size: 12px; }
+  .author-notes { font-size: 11px; }
+  .resource-links { gap: 8px; }
+  .resource { padding: 8px 15px; font-size: 14px; }
+  section { padding: 24px 0; }
+  h2 { font-size: 25px; }
+  h3 { font-size: 19px; }
+  #abstract p { text-align: left; }
+  figcaption { font-size: 13px; }
+  td, th { padding: 8px; }
+  .citation-box { padding: 16px; }
+  pre { font-size: 12px; }
+}

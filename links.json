@@ -1,0 +1,6 @@
+{
+  "project": "https://pigeons-captioner.github.io/",
+  "paper": "https://arxiv.org/abs/2610.xxxxx",
+  "code": "https://github.com/PIGEONS-Captioner/PIGEONS",
+  "model": "https://huggingface.co/PIGEONS-Captioner/PIGEONS"
+}
